@@ -1,4 +1,4 @@
-public abstract class Plant {
+public abstract class Plant implements BoardMovement{
 
     int roundToReproduce;
     int rounds;
