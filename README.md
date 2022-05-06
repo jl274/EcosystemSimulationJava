@@ -7,6 +7,7 @@
 2. [Board](#meadow-board)
 3. [Animals](#animals)
     * [General concept](#general-concept)
+    * [Carnivorous concept](#carnivorous-animal)
 4. [Plants](#plants)
     * [General concept](#general-concept-plants)
 
@@ -47,6 +48,12 @@ Methods:
 * eat - abstract eating method of some MeadowBoard object that should 
   affect some other properties and may result in reproducing
 
+## Carnivorous animal
+Carnivorous - abstract class for carnivorous animals
+
+Methods:
+* eatAnimal - abstract eating method only pre-defining that other Animal is what have to be eaten
+* eat - is implemented to use eatAnimal, throws exception otherwise
 
 # Plants
 

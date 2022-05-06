@@ -13,5 +13,5 @@ public abstract class Animal implements BoardMovement {
     }
 
     public abstract Animal reproduce();
-    public abstract boolean Eat(BoardMovement sth);
+    public abstract boolean eat(BoardMovement sth);
 }
