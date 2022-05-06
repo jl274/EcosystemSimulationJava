@@ -18,4 +18,19 @@ public class MeadowBoard {
         return this.meadow[x][y] == null;
     }
 
+
+    public void printBoard(){
+        for (int iX = 0; iX < xSize; iX++){
+            for (int iY = 0; iY < ySize; iY++){
+
+                if (this.isFieldEmpty(iX, iY)){
+                    System.out.print(this.meadowEmoji);
+                } else {
+                    // not implemented yet
+                }
+
+            }
+            System.out.println("");
+        }
+    }
 }
