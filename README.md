@@ -42,7 +42,8 @@ Animal - asbtract class for animals.
 Properties:
 * timesAteToReproduce - how many times need to eat in order to reproduce
 * ate - how many times it ate without reproducing
-* endurance - how many rounds can go without eating before dying
+* endurance - how many rounds can go without eating before reducing health
+* roundsStarving - number of rounds animal haven't eat
 * health - currenct health level, if 0 - it dies
 
 Methods:
@@ -63,6 +64,14 @@ Herbivorous - abstract class for Herbivorous animals
 Methods:
 * eatPlant - abstract eating method only pre-defining that Plant is what have to be eaten
 * eat - is implemented to use eatPlant, throws exception otherwise
+
+### Sheep
+Sheep details:
+* timesAteToReproduce: 6
+* endurance: 2
+* health: 2
+* emoji: 🐑
+* reproduce(): new Sheep has one more health point
 
 # Plants
 
