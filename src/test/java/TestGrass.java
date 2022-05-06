@@ -19,4 +19,9 @@ public class TestGrass {
         assertEquals(0.2, this.grass.reproduceChance, 0.01);
         assertEquals("\uD83C\uDF3F", this.grass.getEmoji());
     }
+
+    @Test
+    public void testReproduceReturnsGrass(){
+        assertTrue(this.grass.reproduce() instanceof Grass);
+    }
 }
