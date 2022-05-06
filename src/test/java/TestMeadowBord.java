@@ -15,7 +15,7 @@ public class TestMeadowBord {
     public void testMeadowDimension(){
         int xSize = this.board.getMeadow().length;
         int ySize = this.board.getMeadow()[0].length;
-        assertArrayEquals(new int[]{10, 12}, new int[]{xSize, ySize});
+        assertArrayEquals(new int[]{this.board.getXSize(), this.board.getYSize()}, new int[]{xSize, ySize});
     }
 
     @Test
