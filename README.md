@@ -11,6 +11,7 @@
     * [Herbivorous concept](#herbivorous-animal)
 4. [Plants](#plants)
     * [General concept](#general-concept-plants)
+    * [Grass](#grass)
 
 # Project info
 
@@ -76,3 +77,10 @@ Properties:
 
 Method:
 * reproduce - abstract reproduction that creates new identical Plant
+
+
+## Grass
+Grass details:
+* roundsToReproduce: 4
+* reproduceChange: 20%
+* emoji: 🌿
