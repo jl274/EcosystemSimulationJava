@@ -2,15 +2,15 @@ public abstract class Plant implements BoardMovement{
 
     int roundToReproduce;
     int rounds;
-    float reproduceChance;
+    double reproduceChance;
 
     public Plant(int toReproduce, int reproduceChance){
         this.roundToReproduce = toReproduce;
         this.rounds = 0;
-        this.reproduceChance = (float) reproduceChance / 100;
+        this.reproduceChance = (double) reproduceChance / 100;
     }
 
-    public Plant(int toReproduce, float reproduceChance){
+    public Plant(int toReproduce, double reproduceChance){
         this.roundToReproduce = toReproduce;
         this.rounds = 0;
         this.reproduceChance = reproduceChance;
