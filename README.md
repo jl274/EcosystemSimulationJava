@@ -55,6 +55,13 @@ Methods:
 * eatAnimal - abstract eating method only pre-defining that other Animal is what have to be eaten
 * eat - is implemented to use eatAnimal, throws exception otherwise
 
+## Herbivorous animal
+Herbivorous - abstract class for Herbivorous animals
+
+Methods:
+* eatPlant - abstract eating method only pre-defining that Plant is what have to be eaten
+* eat - is implemented to use eatPlant, throws exception otherwise
+
 # Plants
 
 ## General concept plants
