@@ -7,6 +7,8 @@
 2. [Board](#meadow-board)
 3. [Animals](#animals)
     * [General concept](#general-concept)
+4. [Plants](#plants)
+    * [General concept](#general-concept-plants)
 
 # Project info
 
@@ -45,3 +47,17 @@ Methods:
 * eat - abstract eating method of some MeadowBoard object that should 
   affect some other properties and may result in reproducing
 
+
+# Plants
+
+## General concept plants
+
+Plant  - abstract class for plants.
+
+Properties:
+* roundsToReproduce - round without being eaten needed in order to force reproduce
+* rounds - counts rounds without being eaten
+* reproduceChange - change to reproduce in each turn in %
+
+Method:
+* reproduce - abstract reproduction that creates new identical Plant
