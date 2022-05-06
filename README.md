@@ -8,6 +8,7 @@
 3. [Animals](#animals)
     * [General concept](#general-concept)
     * [Carnivorous concept](#carnivorous-animal)
+    * [Herbivorous concept](#herbivorous-animal)
 4. [Plants](#plants)
     * [General concept](#general-concept-plants)
 
