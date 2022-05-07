@@ -16,7 +16,7 @@ public class Sheep extends Herbivorous{
 
     @Override
     public Animal reproduce() {
-        return new Sheep(this.health++);
+        return new Sheep(this.health + 1);
     }
 
     @Override
