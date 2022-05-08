@@ -26,7 +26,7 @@ public class MeadowBoard {
                 if (this.isFieldEmpty(iX, iY)){
                     System.out.print(this.meadowEmoji);
                 } else {
-                    // not implemented yet
+                    System.out.println(this.getMeadow()[iX][iY].getEmoji());
                 }
 
             }
