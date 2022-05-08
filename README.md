@@ -8,6 +8,7 @@
 3. [Animals](#animals)
     * [General concept](#general-concept)
     * [Carnivorous concept](#carnivorous-animal)
+        * [Wolf](#wolf)
     * [Herbivorous concept](#herbivorous-animal)
         * [Sheep](#sheep)
 4. [Plants](#plants)
@@ -58,6 +59,14 @@ Carnivorous - abstract class for carnivorous animals
 Methods:
 * eatAnimal - abstract eating method only pre-defining that other Animal is what have to be eaten
 * eat - is implemented to use eatAnimal, throws exception otherwise
+
+### Wolf
+Wolf details:
+* timesAteToReproduce: 2
+* endurance: 5
+* health: 6
+* emoji: 🐺
+* reproduce(): new Wolf, but parent times needed to reproduce is raised to the power of two
 
 ## Herbivorous animal
 Herbivorous - abstract class for Herbivorous animals
