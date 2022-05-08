@@ -14,6 +14,21 @@ public abstract class Animal implements BoardMovement {
         this.roundsStarving = 0;
     }
 
+    @Override
+    public BoardMovement makeInteraction(BoardMovement with){
+        if (this.canEat(with)){
+            boolean willReproduce = this.eat(with);
+            if (willReproduce){
+                return this.reproduce();
+            }
+        }
+        return null;
+    }
+
+    public boolean canEat(BoardMovement sth){
+        return false;
+    }
+
     public abstract Animal reproduce();
     public abstract boolean eat(BoardMovement sth);
 }

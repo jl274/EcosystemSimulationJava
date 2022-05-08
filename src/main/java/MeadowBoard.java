@@ -70,7 +70,10 @@ public class MeadowBoard {
         if (isFieldEmpty(xNew, yNew)){
             this.move(iX, iY, xNew, yNew);
         } else {
-            // performing action
+            BoardMovement possibleReproduction = this.getMeadow()[iX][iY].makeInteraction(this.getMeadow()[xNew][yNew]);
+            if (possibleReproduction != null){
+                // placing new
+            }
         }
     }
 }

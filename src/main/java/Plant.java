@@ -15,5 +15,11 @@ public abstract class Plant implements BoardMovement{
         this.rounds = 0;
         this.reproduceChance = reproduceChance;
     }
+
+    @Override
+    public BoardMovement makeInteraction(BoardMovement with){
+        return null;
+    }
+
     public abstract Plant reproduce();
 }
