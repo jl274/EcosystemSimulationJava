@@ -14,4 +14,9 @@ public abstract class Carnivorous extends Animal {
             throw new IllegalArgumentException("Carnivorous animals can only eat other animals");
         }
     }
+
+    @Override
+    public boolean canEat(BoardMovement sth) {
+        return sth instanceof Herbivorous;
+    }
 }
