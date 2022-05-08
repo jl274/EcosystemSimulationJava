@@ -1,6 +1,8 @@
 public interface BoardMovement {
 
-    public String getEmoji();
+    String getEmoji();
 
-    public BoardMovement makeInteraction(BoardMovement with);
+    BoardMovement makeInteraction(BoardMovement with);
+
+    boolean didDeceased();
 }

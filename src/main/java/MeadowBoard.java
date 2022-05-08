@@ -70,7 +70,11 @@ public class MeadowBoard {
         if (isFieldEmpty(xNew, yNew)){
             this.move(iX, iY, xNew, yNew);
         } else {
-            BoardMovement possibleReproduction = this.getMeadow()[iX][iY].makeInteraction(this.getMeadow()[xNew][yNew]);
+            BoardMovement interacted = this.getMeadow()[xNew][yNew];
+            BoardMovement possibleReproduction = this.getMeadow()[iX][iY].makeInteraction(interacted);
+            if (interacted.didDeceased()){
+                // erase from board
+            }
             if (possibleReproduction != null){
                 // placing new
             }

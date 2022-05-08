@@ -15,6 +15,11 @@ public abstract class Animal implements BoardMovement {
     }
 
     @Override
+    public boolean didDeceased() {
+        return this.health <= 0;
+    }
+
+    @Override
     public BoardMovement makeInteraction(BoardMovement with){
         if (this.canEat(with)){
             boolean willReproduce = this.eat(with);
