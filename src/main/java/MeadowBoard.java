@@ -63,21 +63,35 @@ public class MeadowBoard {
     }
 
     public void makeTurn(int iX, int iY){
+
         int xVector = this.reverseVectorIfExceedBoardSize(getRandomVector(), iX, "x");
         int yVector = this.reverseVectorIfExceedBoardSize(getRandomVector(), iY, "y");
         int xNew = iX + xVector;
         int yNew = iY + yVector;
+        BoardMovement thisBoardCharacter = this.getMeadow()[iX][iY];
+
         if (isFieldEmpty(xNew, yNew)){
+
+            BoardMovement possibleReproduction = thisBoardCharacter.makeMovementAction();
+            if (thisBoardCharacter.didDeceased()){
+                // erase from board
+            }
+            if (possibleReproduction != null){
+                // placing new
+            }
             this.move(iX, iY, xNew, yNew);
+
         } else {
+
             BoardMovement interacted = this.getMeadow()[xNew][yNew];
-            BoardMovement possibleReproduction = this.getMeadow()[iX][iY].makeInteraction(interacted);
+            BoardMovement possibleReproduction = thisBoardCharacter.makeInteraction(interacted);
             if (interacted.didDeceased()){
                 // erase from board
             }
             if (possibleReproduction != null){
                 // placing new
             }
+
         }
     }
 }

@@ -26,6 +26,20 @@ public abstract class Plant implements BoardMovement{
     }
 
     @Override
+    public BoardMovement makeMovementAction() {
+        this.rounds++;
+        double randomNumber = Math.random();
+        if (this.rounds >= this.roundToReproduce){
+            this.rounds = 0;
+            return this.reproduce();
+        } else if (randomNumber < this.reproduceChance){
+            this.rounds = 0;
+            return this.reproduce();
+        }
+        return null;
+    }
+
+    @Override
     public boolean didDeceased() {
         return this.deceased;
     }

@@ -4,5 +4,7 @@ public interface BoardMovement {
 
     BoardMovement makeInteraction(BoardMovement with);
 
+    BoardMovement makeMovementAction();
+
     boolean didDeceased();
 }
