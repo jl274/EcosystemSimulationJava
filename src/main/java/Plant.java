@@ -44,6 +44,11 @@ public abstract class Plant implements BoardMovement{
         return this.deceased;
     }
 
+    @Override
+    public boolean canMove() {
+        return false;
+    }
+
     public void beingEaten(){
         this.deceased = true;
     }

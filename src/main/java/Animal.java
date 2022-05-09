@@ -35,6 +35,11 @@ public abstract class Animal implements BoardMovement {
         return null;
     }
 
+    @Override
+    public boolean canMove() {
+        return true;
+    }
+
     public boolean canEat(BoardMovement sth){
         return false;
     }

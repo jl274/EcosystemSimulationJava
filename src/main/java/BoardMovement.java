@@ -7,4 +7,6 @@ public interface BoardMovement {
     BoardMovement makeMovementAction();
 
     boolean didDeceased();
+
+    boolean canMove();
 }

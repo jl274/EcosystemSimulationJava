@@ -79,7 +79,9 @@ public class MeadowBoard {
             if (possibleReproduction != null){
                 // placing new
             }
-            this.move(iX, iY, xNew, yNew);
+            if (thisBoardCharacter.canMove()){
+                this.move(iX, iY, xNew, yNew);
+            }
 
         } else {
 
