@@ -73,25 +73,33 @@ public class MeadowBoard {
         if (isFieldEmpty(xNew, yNew)){
 
             BoardMovement possibleReproduction = thisBoardCharacter.makeMovementAction();
+            // if not deceased and does not reproducing then move
+            // if not deceased and reproducing, create new board character on move position and resign from moving
+            // if deceased then delete and do nothing more
             if (thisBoardCharacter.didDeceased()){
-                // erase from board
+                this.eraseFromPosition(iX, iY);
+            } else {
+                if (possibleReproduction != null){
+                    this.placeOnPosition(possibleReproduction, xNew, yNew);
+                } else {
+                    if (thisBoardCharacter.canMove()){
+                        this.move(iX, iY, xNew, yNew);
+                    }
+                }
             }
-            if (possibleReproduction != null){
-                // placing new
-            }
-            if (thisBoardCharacter.canMove()){
-                this.move(iX, iY, xNew, yNew);
-            }
+
 
         } else {
 
             BoardMovement interacted = this.getMeadow()[xNew][yNew];
             BoardMovement possibleReproduction = thisBoardCharacter.makeInteraction(interacted);
             if (interacted.didDeceased()){
-                // erase from board
-            }
-            if (possibleReproduction != null){
-                // placing new
+                this.eraseFromPosition(xNew, yNew);
+                if (possibleReproduction != null){
+                    this.placeOnPosition(possibleReproduction, xNew, yNew);
+                }
+            } else if (possibleReproduction != null){
+                // find empty position and place
             }
 
         }
@@ -105,5 +113,13 @@ public class MeadowBoard {
 
             }
         }
+    }
+
+    public void placeOnPosition(BoardMovement objectToBePlaced, int iX, int iY){
+        this.getMeadow()[iX][iY] = objectToBePlaced;
+    }
+
+    private void eraseFromPosition(int iX, int iY){
+        this.getMeadow()[iX][iY] = null;
     }
 }
