@@ -62,7 +62,7 @@ public class MeadowBoard {
         }
     }
 
-    public void makeTurn(int iX, int iY){
+    private void makeTurn(int iX, int iY){
 
         int xVector = this.reverseVectorIfExceedBoardSize(getRandomVector(), iX, "x");
         int yVector = this.reverseVectorIfExceedBoardSize(getRandomVector(), iY, "y");
@@ -94,6 +94,16 @@ public class MeadowBoard {
                 // placing new
             }
 
+        }
+    }
+
+    public void makeTurnForWholeEcosystem(){
+        for (int iX = 0; iX < xSize; iX++){
+            for (int iY = 0; iY < ySize; iY++){
+
+                this.makeTurn(iX, iY);
+
+            }
         }
     }
 }
