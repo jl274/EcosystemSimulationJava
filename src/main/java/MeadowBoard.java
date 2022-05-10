@@ -99,7 +99,7 @@ public class MeadowBoard {
                     this.placeOnPosition(possibleReproduction, xNew, yNew);
                 }
             } else if (possibleReproduction != null){
-                // find empty position and place
+                this.placeOnAnySurroundingEmptyPosition(possibleReproduction, iX, iY);
             }
 
         }
@@ -117,6 +117,19 @@ public class MeadowBoard {
 
     public void placeOnPosition(BoardMovement objectToBePlaced, int iX, int iY){
         this.getMeadow()[iX][iY] = objectToBePlaced;
+    }
+
+    private void placeOnAnySurroundingEmptyPosition(BoardMovement objectToBePlaced, int iX, int iY){
+        int[] possibleX = new int[]{iX-1, iX-1, iX-1, iX, iX, iX+1, iX+1, iX+1};
+        int[] possibleY = new int[]{iY-1, iY, iY+1, iY-1, iY+1, iY-1, iY, iY+1};
+        for (int i = 0; i < 8; i++){
+            int x = possibleX[i];
+            int y = possibleY[i];
+            if (isFieldEmpty(x, y)){
+                this.placeOnPosition(objectToBePlaced, x, y);
+                break;
+            }
+        }
     }
 
     private void eraseFromPosition(int iX, int iY){
