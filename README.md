@@ -34,6 +34,17 @@ Board is 2 dimension matrix in Meadow class.
 Info:
 * emoji: 🟩
 
+## Examples
+
+Meadow can look like this after placing three grasses and one sheep:
+```text
+🌿	🌿	🌿	🐑	🟩	
+🟩	🟩	🟩	🟩	🟩	
+🟩	🟩	🟩	🟩	🟩	
+🟩	🟩	🟩	🟩	🟩	
+🟩	🟩	🟩	🟩	🟩
+```
+
 
 # Animals
 
