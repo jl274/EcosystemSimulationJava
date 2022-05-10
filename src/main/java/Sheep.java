@@ -21,6 +21,7 @@ public class Sheep extends Herbivorous{
 
     @Override
     public boolean eatPlant(Plant plant) {
+        plant.beingEaten();
         this.roundsStarving = 0;
         this.ate++;
         if (this.ate == this.timesAteToReproduce){
