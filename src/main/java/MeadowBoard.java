@@ -30,7 +30,7 @@ public class MeadowBoard {
                 if (this.isFieldEmpty(iX, iY)){
                     System.out.print(this.meadowEmoji);
                 } else {
-                    System.out.println(this.getMeadow()[iX][iY].getEmoji());
+                    System.out.print(this.getMeadow()[iX][iY].getEmoji());
                 }
 
             }
@@ -64,8 +64,17 @@ public class MeadowBoard {
 
     private void makeTurn(int iX, int iY){
 
-        int xVector = this.reverseVectorIfExceedBoardSize(getRandomVector(), iX, "x");
-        int yVector = this.reverseVectorIfExceedBoardSize(getRandomVector(), iY, "y");
+        int xVector;
+        int yVector;
+        while (true){
+            xVector = this.reverseVectorIfExceedBoardSize(getRandomVector(), iX, "x");
+            yVector = this.reverseVectorIfExceedBoardSize(getRandomVector(), iY, "y");
+            if (xVector == yVector && xVector == 0){
+                continue;
+            }
+            break;
+        }
+
         int xNew = iX + xVector;
         int yNew = iY + yVector;
         BoardMovement thisBoardCharacter = this.getMeadow()[iX][iY];
@@ -109,7 +118,9 @@ public class MeadowBoard {
         for (int iX = 0; iX < xSize; iX++){
             for (int iY = 0; iY < ySize; iY++){
 
-                this.makeTurn(iX, iY);
+                if (!this.isFieldEmpty(iX, iY)){
+                    this.makeTurn(iX, iY);
+                }
 
             }
         }
